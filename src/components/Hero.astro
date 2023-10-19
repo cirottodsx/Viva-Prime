@@ -6,6 +6,9 @@ import Form from "./Form.astro";
   <div class="container">
     <div class="img">
       <img src="../../public/imgs/male-enchancement.png" alt="" />
+      <p class="img-text">
+        Size Does Matter ! Laboratory Formulated For Size & Stamina
+      </p>
     </div>
 
     <div class="form">
@@ -17,7 +20,6 @@ import Form from "./Form.astro";
 
 <style>
   .main-container {
-    width: 100%;
     background: url(https://www.getvivaprime.com/ca/special/v1/app/desktop/images/beach-woman-493fc68a2c4e71f99f8c52578fbb6cb2ba02889168e8ae7cfacc1ded014d6360.jpg)
       top center no-repeat;
   }
@@ -32,8 +34,28 @@ import Form from "./Form.astro";
   .form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
   }
+
+  .form img {
+    margin: 1rem 0;
+    width: 313px;
+  }
+
+  .img {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .img-text {
+    font-family: "Montserrat", sans-serif;
+    color: #050505;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+  }
+
   @media (max-width: 1200px) {
     .main-container {
       min-height: 863px;
@@ -45,6 +67,10 @@ import Form from "./Form.astro";
     .main-container {
       min-height: auto;
       background-size: contain;
+    }
+
+    .container {
+      flex-direction: column;
     }
 
     .img img {
