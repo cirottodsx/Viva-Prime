@@ -1,0 +1,128 @@
+---
+
+---
+
+<div class="container" id="rush-my-order">
+  <div class="seta">
+    <img src="../../public/imgs/seta.png" alt="" />
+  </div>
+
+  <div class="formTop">
+    <div class="text">
+      <h1>Where do we Send your Bottle?</h1>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <form action="" class="form-content">
+      <input type="text" placeholder="First Name" />
+      <input type="text" placeholder="Last Name" />
+      <input type="email" name="" id="" placeholder="Email Addres" />
+      <input type="number" name="" id="" placeholder="Phone" />
+      <input type="text" placeholder="Your Addres" />
+      <input type="text" placeholder="Your City" />
+      <select
+        name="shippingState"
+        class="form-control required"
+        data-selected=""
+        data-error-message="Please select your state!"
+        ><option value="" selected="selected">Select State</option><option
+          value="AB">Alberta</option
+        ><option value="BC">British Columbia</option><option value="MB"
+          >Manitoba</option
+        ><option value="NB">New Brunswick</option><option value="NL"
+          >Newfoundland and Labrador</option
+        ><option value="NT">Northwest Territories</option><option value="NS"
+          >Nova Scotia</option
+        ><option value="NU">Nunavut</option><option value="ON">Ontario</option
+        ><option value="PE">Prince Edward Island</option><option value="QC"
+          >Quebec</option
+        ><option value="SK">Saskatchewan</option><option value="YT"
+          >Yukon</option
+        ></select
+      >
+
+      <input
+        type="text"
+        name="shippingZip"
+        data-min-length="5"
+        autocomplete="disabled"
+        data-max-length="7"
+        maxlength="7"
+        placeholder="Postal Code"
+        class="form-control required"
+        value=""
+        data-error-message="Please enter a valid postal code!"
+      />
+
+      <img src="../../public/imgs/rush-my-order-btn.png" alt="" />
+      <p>256 bit secure form</p>
+      <img src="../../public/imgs/mcaff.jpg" alt="" />
+    </form>
+  </div>
+</div>
+
+<style>
+  .seta img {
+    position: absolute;
+    top: -120px;
+    left: 50px;
+  }
+  .container {
+    background-color: #0699ee;
+    border-radius: 10px;
+    max-width: 380px;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+  }
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 10px;
+    padding-top: 5px;
+  }
+
+  form input,
+  select {
+    margin: 2px 10px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    outline: none;
+    width: 90%;
+  }
+
+  form img {
+    width: 254px;
+  }
+
+  form img:nth-child(1) {
+    cursor: pointer;
+  }
+
+  .formTop {
+    padding: 1.5rem;
+    color: #fff;
+  }
+
+  .seta {
+    position: relative;
+    left: 18rem;
+    bottom: -2rem;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import Header from "../components/Header.astro";
+
+import { getEntry } from "astro:content";
+const conteudo = await getEntry("conteudo", "conteudo");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{conteudo.data.title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>

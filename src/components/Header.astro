@@ -1,0 +1,216 @@
+---
+
+---
+
+<header class="container">
+  <div class="header-top">
+    <p>
+      <img src="../../public/imgs/warning.png" alt="" />
+      <strong> Warning:</strong> Due to extremely high social media demand for
+      our offers, there is limited supply of Viva Prime in stock as of <span
+        id="day">October 19, 2023</span
+      > ! Offer expires in EXPIRED :
+    </p>
+  </div>
+
+  <div class="nav-container">
+    <div class="img">
+      <img src="../../public/imgs/viva-primeLogo.png" alt="" />
+    </div>
+
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">How it Works</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">The Proof</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">What You Get</a>
+        </li>
+        <li class="nav-item">
+          <a href="#rush-my-order" class="nav-link">Order Now</a>
+        </li>
+      </ul>
+
+      <div class="hamburguer">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: #666;
+    text-decoration: none;
+  }
+
+  .img img {
+    width: 225px;
+  }
+
+  .header-top {
+    font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    color: #731c24;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-top img {
+    width: 20px;
+  }
+
+  .header-top strong {
+    text-transform: uppercase;
+  }
+
+  .nav-container {
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7rem;
+  }
+
+  .navbar {
+    min-height: 3.7rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  .nav-menu li:last-child {
+    text-transform: uppercase;
+  }
+
+  .nav-link:hover {
+    color: #ff4343;
+  }
+
+  .hamburguer {
+    display: none;
+    cursor: pointer;
+    border: 1px solid #66666679;
+    padding: 0 5px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  .hamburguer:hover {
+    background-color: #c4c4c4;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #00000079;
+  }
+
+  #day {
+    color: #731c24;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .hamburguer {
+      display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #eee;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .nav-item {
+      margin: 1rem 0;
+    }
+
+    .nav-menu.active {
+      left: 0;
+    }
+  }
+
+  @media (max-width: 481px) {
+    .nav-container {
+      justify-content: space-around;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .nav-container {
+      justify-content: space-between;
+      padding: 0 1rem;
+      width: 100vw;
+    }
+
+    .img img {
+      width: 200px;
+    }
+  }
+</style>
+
+<script>
+  const hamburguer = document.querySelector(".hamburguer") as HTMLElement;
+  const navMenu = document.querySelector(".nav-menu") as HTMLElement;
+
+  hamburguer?.addEventListener("click", () => {
+    hamburguer.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".nav-link").forEach((n) =>
+    n.addEventListener("click", () => {
+      hamburguer.classList.remove("active");
+      navMenu.classList.remove("active");
+    })
+  );
+</script>

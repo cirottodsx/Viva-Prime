@@ -1,0 +1,54 @@
+---
+import Form from "./Form.astro";
+---
+
+<div class="main-container">
+  <div class="container">
+    <div class="img">
+      <img src="../../public/imgs/male-enchancement.png" alt="" />
+    </div>
+
+    <div class="form">
+      <img src="../../public/imgs/3selos.png" alt="" />
+      <Form />
+    </div>
+  </div>
+</div>
+
+<style>
+  .main-container {
+    width: 100%;
+    background: url(https://www.getvivaprime.com/ca/special/v1/app/desktop/images/beach-woman-493fc68a2c4e71f99f8c52578fbb6cb2ba02889168e8ae7cfacc1ded014d6360.jpg)
+      top center no-repeat;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  @media (max-width: 1200px) {
+    .main-container {
+      min-height: 863px;
+      background: url(https://www.getvivaprime.com/ca/special/v1/app/desktop/images/beach-woman-493fc68a2c4e71f99f8c52578fbb6cb2ba02889168e8ae7cfacc1ded014d6360.jpg)
+        top center no-repeat;
+    }
+  }
+  @media (max-width: 768px) {
+    .main-container {
+      min-height: auto;
+      background-size: contain;
+    }
+
+    .img img {
+      margin-top: 5rem;
+    }
+  }
+</style>
