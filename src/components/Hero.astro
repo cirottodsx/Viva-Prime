@@ -3,12 +3,10 @@ import Form from "./Form.astro";
 ---
 
 <div class="main-container">
-  <div class="container">
-    <div class="img">
+  <div class="container max-container">
+    <div class="img text">
       <img src="../../public/imgs/male-enchancement.png" alt="" />
-      <p class="img-text">
-        Size Does Matter ! Laboratory Formulated For Size & Stamina
-      </p>
+      <p>Size Does Matter ! Laboratory Formulated For<br /> Size & Stamina</p>
     </div>
 
     <div class="form">
@@ -27,8 +25,6 @@ import Form from "./Form.astro";
   .container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
   }
 
   .form {
@@ -38,25 +34,25 @@ import Form from "./Form.astro";
   }
 
   .form img {
-    margin: 1rem 0;
-    width: 313px;
-  }
-
-  .img {
-    max-width: 700px;
+    max-width: 100%;
     width: 100%;
   }
 
-  .img-text {
-    font-family: "Montserrat", sans-serif;
-    color: #050505;
-    font-size: 1.8rem;
-    font-weight: 300;
-    text-align: center;
-    display: block;
+  .img img {
+    max-width: 100%;
+    width: 100%;
   }
 
-  @media (max-width: 1200px) {
+  .text p {
+    font-family: "Montserrat", sans-serif;
+    color: #050505;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  @media (max-width: 1025px) {
     .main-container {
       min-height: 863px;
       background: url(https://www.getvivaprime.com/ca/special/v1/app/desktop/images/beach-woman-493fc68a2c4e71f99f8c52578fbb6cb2ba02889168e8ae7cfacc1ded014d6360.jpg)
@@ -73,8 +69,18 @@ import Form from "./Form.astro";
       flex-direction: column;
     }
 
-    .img img {
-      margin-top: 5rem;
+    .img {
+      margin-top: 4rem;
     }
+
+    .text p {
+      display: none;
+    }
+  }
+
+  @media (max-width: 481px) {
+  }
+
+  @media (max-width: 320px) {
   }
 </style>

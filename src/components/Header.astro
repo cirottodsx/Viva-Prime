@@ -46,7 +46,7 @@
 <style>
   header {
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
   }
 
   li {
@@ -186,14 +186,29 @@
   }
 
   @media (max-width: 320px) {
+    .header-top {
+      font-size: 10%;
+    }
     .nav-container {
-      justify-content: space-between;
+      justify-content: space-evenly;
       padding: 0 1rem;
-      width: 100vw;
+      width: 100%;
     }
 
     .img img {
       width: 200px;
+    }
+
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 50px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #eee;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
     }
   }
 </style>

@@ -3,9 +3,9 @@
 ---
 
 <div class="form-container .max-container" id="rush-my-order">
-  <div class="seta">
+  <!-- <div class="seta">
     <img src="../../public/imgs/seta.png" alt="" />
-  </div>
+  </div> -->
 
   <div class="form-title">
     <h1>Where do we <br />Send your Bottle?</h1>
@@ -53,20 +53,23 @@
         data-error-message="Please enter a valid postal code!"
       />
 
-      <img src="../../public/imgs/rush-my-order-btn.png" alt="" />
-      <p class="secure">
-        <i class="fa fa-lock"></i> 256 bit secure form
-      </p>
-      <img src="../../public/imgs/mcaff.jpg" alt="" />
+      <div class="rush-btn">
+        <img src="../../public/imgs/rush-my-order-btn.png" alt="" />
+        <p class="secure">
+          <i class="fa fa-lock"></i> 256 bit secure form
+        </p>
+        <img src="../../public/imgs/mcaff.jpg" alt="" />
+      </div>
     </form>
   </div>
 </div>
 
 <style>
   .form-container {
+    max-width: 95%;
+    width: 100%;
     border-radius: 20px;
     background-color: #fff;
-    max-width: 400px;
     border: 5px solid #0699ee;
   }
 
@@ -78,6 +81,7 @@
     background-color: #0699ee;
     border-radius: 3px 3px 0 0;
     line-height: 1.85rem;
+    width: 100%;
   }
 
   .form-title h1 {
@@ -85,8 +89,12 @@
   }
 
   .form-content {
-    gap: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    gap: 0.5rem;
     background-color: #fff;
     border-radius: 0 0 20px 20px;
     padding: 15px 10px 10px 10px;
@@ -94,20 +102,12 @@
 
   form input,
   select {
-    margin: 3px 0;
     padding: 0.5rem;
     border-radius: 5px;
     border: 1px solid #999999;
     outline: none;
-    width: 90%;
-  }
-
-  form img {
-    width: 254px;
-  }
-
-  form img:nth-child(1) {
-    cursor: pointer;
+    width: 100%;
+    flex: 1;
   }
 
   .seta {
@@ -126,9 +126,13 @@
     font-weight: 600;
   }
 
+  .rush-btn img {
+    max-width: 100%;
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
-    .form-container {
-      max-width: 90vw;
+    .form-content {
       width: 100%;
     }
   }
