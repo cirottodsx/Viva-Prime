@@ -1,16 +1,18 @@
 ---
 import Form from "./Form.astro";
+import { getEntry } from "astro:content";
+const conteudo = await getEntry("conteudo", "hero");
 ---
 
 <div class="main-container">
   <div class="container max-container">
     <div class="img text">
-      <img src="../../public/imgs/male-enchancement.png" alt="" />
-      <p>Size Does Matter ! Laboratory Formulated For<br /> Size & Stamina</p>
+      <img src={conteudo.data.image1} alt="" />
+      <p>{conteudo.data.HeroP}</p>
     </div>
 
     <div class="form">
-      <img src="../../public/imgs/3selos.png" alt="" />
+      <img src={conteudo.data.image2} alt="" />
       <Form />
     </div>
   </div>
@@ -31,6 +33,7 @@ import Form from "./Form.astro";
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .form img {
@@ -46,7 +49,7 @@ import Form from "./Form.astro";
   .text p {
     font-family: "Montserrat", sans-serif;
     color: #050505;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 300;
     text-align: center;
     padding: 2rem;

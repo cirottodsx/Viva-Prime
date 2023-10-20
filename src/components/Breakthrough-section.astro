@@ -1,25 +1,17 @@
 ---
-
+import { getEntry } from "astro:content";
+const conteudo = await getEntry("conteudo", "breakthrough");
 ---
 
 <section class="container max-container">
   <div class="texts">
-    <h2 class="blue">Breakthrough "Amazing Formula"!</h2>
-    <p class="orange">
-      Anytime <strong>Natural Male Enhancement Formula</strong>
-    </p>
-    <p>
-      Viva Prime - The single most powerful male enhancement all natural
-      supplement formula ever, and the only product available with clinically
-      tested ingredients. YOUR SIMPLE SOLUTION FOR A LARGER PENIS.
-    </p>
-    <p class="underline">
-      This powerful male enhancement formula has been identifed as the most
-      exciting solution of our time
-    </p>
+    <h2 class="blue">{conteudo.data.title}</h2>
+    <p class="orange">{conteudo.data.subtitle}</p>
+    <p>{conteudo.data.p1}</p>
+    <p class="underline">{conteudo.data.p2}</p>
   </div>
 
-  <img src="../../public/imgs/remedio.png" alt="" width="479px" />
+  <img src={conteudo.data.img} alt="" />
 </section>
 
 <style>

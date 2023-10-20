@@ -1,21 +1,15 @@
 ---
-
+import { getEntry } from "astro:content";
+const conteudo = await getEntry("conteudo", "the-proof");
 ---
 
 <section class="container">
   <div class="max-container main-container">
     <div class="content">
-      <img src="../../public/imgs/the-proof.png" alt="" />
-      <h1>
-        Viva Prime has helped hundreds of healthy men across all ages enjoy a
-        fuller and satisfied sex life.
-      </h1>
-      <img src="../../public/imgs/peoples.jpg" alt="" />
-      <p class="low">
-        Viva Prime is the only product that combines powerful ingredients such
-        as Tribulus Terrestris, Saw Palmetto, L-Arginine, and Eurycoma
-        Longifolia Extract into a single safe and effective compound.
-      </p>
+      <img src={conteudo.data.theProofImg} alt="" />
+      <h1>{conteudo.data.title}</h1>
+      <img src={conteudo.data.peoplesImg} alt="" />
+      <p class="low">{conteudo.data.footer}</p>
     </div>
   </div>
 </section>
