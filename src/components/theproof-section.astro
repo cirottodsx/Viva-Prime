@@ -11,6 +11,11 @@ const conteudo = await getEntry("conteudo", "the-proof");
       <img src={conteudo.data.peoplesImg} alt="" />
       <p class="low">{conteudo.data.footer}</p>
     </div>
+    <div class="img">
+      <a href="#rush-my-order"
+        ><img src="../../public/imgs/rush-my-rem.png" alt="" /></a
+      >
+    </div>
   </div>
 </section>
 
@@ -21,7 +26,7 @@ const conteudo = await getEntry("conteudo", "the-proof");
 
   .main-container {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     width: 100%;
   }
 
@@ -29,7 +34,7 @@ const conteudo = await getEntry("conteudo", "the-proof");
     margin-top: 6rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-self: flex-end;
     justify-content: center;
     gap: 0.6rem;
     max-width: 50%;
@@ -54,6 +59,12 @@ const conteudo = await getEntry("conteudo", "the-proof");
     font-size: 0.7rem;
     font-weight: 800;
     text-align: center;
+  }
+
+  .img img {
+    max-width: 100%;
+    width: 100%;
+    margin: 2.5rem 0;
   }
 
   @media (max-width: 781px) {

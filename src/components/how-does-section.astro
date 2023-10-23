@@ -1,0 +1,161 @@
+---
+import { getEntry } from "astro:content";
+const conteudo = await getEntry("conteudo", "how-does");
+---
+
+<section class="max-container">
+  <div class="container">
+    <article class="texts">
+      <h1>{conteudo.data.title}</h1>
+      <p>
+        Viva Prime solves the <span class="orange">ENLARGEMENT SOURCE</span> by
+        boosting cell volume to grow larger...
+      </p>
+    </article>
+
+    <div class="card-container">
+      <div class="card">
+        <img src="../../public/imgs/how2.jpg" alt="" />
+        <h3>Tribulus Terrestris Fruit Extract</h3>
+        <p>
+          Increase free testosterone levels. It stimulates the release of
+          luteinizing hormone, which in turn stimulates the release of
+          testosterone from the Leydig cells of the testicles. This stimulation
+          increases powerful erections.
+        </p>
+        <h3>Saw Palmetto Fruit Extract</h3>
+        <p>
+          Revitalize the body and testosterone levels to support a healthy sex
+          drive. It's high nutrient content increases energy, stamina and
+          vitality. Saw Palmetto also contains unique nutrients which support
+          healthy libido.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="../../public/imgs/how3.jpg" alt="" />
+        <h3>L-Arginine</h3>
+        <p>
+          L-Arginine is a precursor of nitric oxide (NO) in the human body.
+          L-Arginine has been shown to significantly improve blood flow to the
+          genital area - helping the penis enlarge to maximum capacity, size,
+          hardness and erection frequency. It was first isolated in 1886,
+          reportedly from the extract of a lupine.
+        </p>
+        <h3>Eurycoma Longifolia Extract</h3>
+        <p>
+          The root and bark of Eurycoma longifolia are used for treating
+          erectile dysfunction (ED), increasing interest in sex, male
+          infertility, boosting athletic performance, body building, and
+          reducing body fat.
+        </p>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <h1>
+        WHETHER IT’S BECAUSE YOU DONT FEEL YOU MEASURE UP IN THE BEDROOM... YOUR
+        PENIS LOOKS SMALLER COMPARED TO YOUR GYM BUDDIES... OR YOU CANT KEEP A
+        PARTNER BECAUSE YOU FEEL INADEQUATE. THAT'S WHAT REALLY MAKES YOU FEEL
+        TORTURED AND HOPELESS IN THE BEDROOM. <br />
+        <span class="org2"> UNTIL NOW</span>
+      </h1>
+    </footer>
+  </div>
+</section>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+  }
+
+  .texts {
+    text-align: center;
+  }
+
+  .texts h1 {
+    font-family: "Monteserrat", sans-serif;
+    font-size: 3.75rem;
+    color: #333;
+    margin: 20px 0 10px;
+  }
+
+  .texts p {
+    font-size: 1.75rem;
+    font-family: "Open sans", sans-serif;
+    line-height: normal;
+    color: #666;
+  }
+
+  .texts .orange {
+    color: #fc4200;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .card {
+    max-width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .card h3 {
+    color: #333;
+    font-size: 1.87rem;
+    margin: 20px 0 10px;
+    font-weight: 500;
+  }
+
+  .card p {
+    color: #666;
+    font-size: 0.9375rem;
+    margin: 0 0 10px;
+  }
+
+  .card img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .card-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 20px 0 10px;
+    max-width: 100%;
+  }
+
+  .card-footer h1 {
+    font-size: 2.0625rem;
+    font-weight: 300;
+    color: #333;
+  }
+
+  .org2 {
+    color: #fc4200;
+  }
+
+  @media (max-width: 781px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 481px) {
+    .card-footer h1 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
